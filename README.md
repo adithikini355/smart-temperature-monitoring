@@ -1,37 +1,47 @@
-# Smart Environmental Monitoring & Growth Regulation System
+# Smart Environmental Monitoring and Growth Regulation System
 
-This project focuses on developing an automated monitoring and control system for applications such as hydroponics, aeroponics, and smart agriculture.
+## Overview
+This project focuses on monitoring and regulating environmental conditions for applications such as hydroponics, aeroponics, and smart agriculture.
 
-The system is designed to regulate plant growth conditions by continuously monitoring environmental parameters such as temperature and humidity, and adjusting them based on predefined growth requirements.
+The system measures temperature and humidity using a DHT11 sensor and helps maintain suitable conditions for plant growth. It also supports basic time-based adjustments depending on growth stages.
 
-## Key Features
-- Real-time monitoring of temperature and environmental conditions
-- Growth regulation based on time-dependent stages
-- Adaptation to both indoor and outdoor environmental variations
-- Integration of sensor data with software-based visualization
-- Support for controlled agriculture systems like hydroponics and aeroponics
+## Features
+- Monitoring of temperature and humidity
+- Data collection using DHT11 sensor
+- Serial communication between Arduino and Python
+- Real-time data visualization
+- Can be extended for automated control
 
-## Working Principle
-The system collects environmental data using sensors and processes it through a microcontroller. Based on predefined thresholds and time-based growth cycles, the system can be extended to control environmental conditions such as temperature and humidity to ensure optimal plant growth.
+## Working
+The DHT11 sensor collects temperature and humidity data through Arduino. The data is sent to a computer using serial communication.
+
+A Python program reads this data and displays it for monitoring. The system can be extended to control environmental conditions based on predefined values.
 
 ## Applications
-- Hydroponics farming systems
-- Aeroponics growth chambers
-- Smart greenhouses
-- Precision agriculture
+- Hydroponics systems
+- Aeroponics setups
+- Small greenhouse monitoring
+- Basic smart agriculture systems
 
 ## Technologies Used
-- Arduino
+- Arduino Uno
 - Python
-- Sensors (DHT11)
-- Serial Communication
-- Data Visualization (Matplotlib)
+- DHT11 sensor
+- PySerial
+- Matplotlib
 
-## Future Improvements
-- Automated control using actuators (fans, pumps, heaters)
-- IoT integration for remote monitoring
-- AI-based growth optimization
+## How to Run
+1. Upload the Arduino code to the board
+2. Connect Arduino to the computer
+3. Install required libraries:
+   pip install pyserial matplotlib
+4. Run the Python script:
+   python temp_monitor.py
+
+## Future Scope
+- Add automatic control using actuators
+- Remote monitoring using IoT
+- Improve accuracy with better sensors
 
 ## Author
 Adithi M Kini
-
